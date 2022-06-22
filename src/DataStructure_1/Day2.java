@@ -1,5 +1,7 @@
 package DataStructure_1;
 
+import Recursion1.TreeNode;
+
 import java.util.HashMap;
 
 public class Day2 {
@@ -21,6 +23,15 @@ public class Day2 {
         }
 
         return res;
+    }
+
+    public int maxDepth(TreeNode root) {
+
+        if(root== null){
+            return 0;
+        }
+
+        return Math.max(maxDepth(root.left),maxDepth(root.right)) + 1;
 
     }
 }
