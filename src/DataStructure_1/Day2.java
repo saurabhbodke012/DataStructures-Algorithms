@@ -32,6 +32,5 @@ public class Day2 {
         }
 
         return Math.max(maxDepth(root.left),maxDepth(root.right)) + 1;
-
     }
 }
