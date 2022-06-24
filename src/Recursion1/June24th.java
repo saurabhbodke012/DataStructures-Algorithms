@@ -1,5 +1,9 @@
 package Recursion1;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 public class June24th {
 
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
@@ -25,4 +29,23 @@ public class June24th {
 
         return head;
     }
+
+    public int kthGrammar(int n, int k) {
+        if(n==1) return 0;
+        if(k%2==0){
+            if (kthGrammar(n-1,k/2)==0){
+                return 1;
+            }else {
+                return 0;
+            }
+        }
+        else{
+            if(kthGrammar(n-1,(k+1)/2)==0) {
+                return 0;
+            }else{
+                return 1;
+            }
+        }
+    }
+
 }
