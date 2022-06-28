@@ -1,7 +1,6 @@
-package Recursion1;
+package Recursion_I;
 
 import java.util.Arrays;
-import java.util.LinkedList;
 
 /**
  * Topic: Recursion

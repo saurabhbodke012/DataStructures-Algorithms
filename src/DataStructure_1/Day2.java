@@ -1,7 +1,5 @@
 package DataStructure_1;
 
-import Recursion1.TreeNode;
-
 import java.util.HashMap;
 
 public class Day2 {
