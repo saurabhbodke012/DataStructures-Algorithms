@@ -1,6 +1,7 @@
 package DataStructure_1;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Day4 {
 
@@ -32,6 +33,26 @@ public class Day4 {
         }else {
             return mat;
         }
+
+    }
+
+
+
+    public List<List<Integer>> generate(int numRows) {
+
+        List<List<Integer>> result=new ArrayList<>();
+        for(int i=0;i<numRows;i++){
+
+            ArrayList<Integer> list=new ArrayList<>();
+            list.add(1);
+            for(int j=1;j<=i-1;j++){
+                list.add(result.get(i-1).get(j)+result.get(i-1).get(j-1));
+            }
+            if(i!=0)
+                list.add(1);
+            result.add(list);
+        }
+        return result;
 
     }
 
