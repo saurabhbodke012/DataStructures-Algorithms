@@ -1,5 +1,7 @@
 package DataStructure_1;
 
+import java.util.HashSet;
+
 public class Day5 {
 
     public boolean searchMatrix(int[][] matrix, int target) {
@@ -35,5 +37,36 @@ public class Day5 {
         return false;
 
     }
+
+    public boolean isValidSudoku(char[][] board) {
+
+        int rows= board.length;
+        int cols= board[0].length;
+
+        HashSet<String> set = new HashSet<>();
+
+        for(int i=0; i<rows; i++){
+
+            for(int j=0; j<cols; j++){
+
+                if(board[i][j] != '.'){
+                    if(!set.add(board[i][j] + "row-" + i) ||!set.add(board[i][j] + "col-" + j) ||                            !set.add(board[i][j] + "boxes-" + ((i/3)*3+j/3 )) ){
+
+                        return false;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        return true;
+
+
+
+    }
+
 
 }
