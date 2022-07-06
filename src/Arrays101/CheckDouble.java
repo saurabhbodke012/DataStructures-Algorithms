@@ -7,15 +7,15 @@ public class CheckDouble {
 
     public boolean checkIfExist(int[] arr) {
 
-        Set<Integer> seen = new HashSet<>();
+        Set<Integer> set = new HashSet<>();
 
         for (int i : arr) {
 
-            if (seen.contains(2 * i) || ( i % 2 == 0 && seen.contains(i / 2))){
+            if (set.contains(2 * i) || ( i % 2 == 0 && set.contains(i / 2))){
                 return true;
             }
 
-            seen.add(i);
+            set.add(i);
         }
 
         return false;
