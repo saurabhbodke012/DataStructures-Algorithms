@@ -79,7 +79,6 @@ public class Practice {
         }
 
         curr.next =  null;
-
         return head;
     }
 
