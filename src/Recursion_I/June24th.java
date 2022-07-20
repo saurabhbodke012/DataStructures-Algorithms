@@ -1,6 +1,6 @@
 package Recursion_I;
 
-public class June24th {
+public class    June24th {
 
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
